@@ -6,10 +6,10 @@ class CustomError(Exception):
 def risk():
     raise CustomError("You have tapped into a risky function")
 
-# try:
-#     risk()
-# except CustomError as e:
-#     print(str(e))
+try:
+    risk()
+except CustomError as e:
+    print(str(e))
 
 # Random moddule import
 
@@ -24,3 +24,20 @@ for i in range(5):
 
 spam = print("Hello")
 print(spam == None)
+
+# Local and global scope
+
+def spam():
+    eggs = 99
+    bacon()
+    print(eggs)
+
+def bacon():
+    ham = 19
+    eggs = 17
+
+spam()
+
+# the eggs of bacon are destroyed after its scope is over so eggs still
+# have the values from the spam function
+
