@@ -40,4 +40,11 @@ spam()
 
 # the eggs of bacon are destroyed after its scope is over so eggs still
 # have the values from the spam function
+# we can have local variables changed from inside the function
+# if we have to do so we have to use global statement inside the
+# function to specify here we are referring to the global variable
 
+# 2D lists
+
+myList = [['cat','dog'],[0,1,2]]
+print(myList[0][1])
